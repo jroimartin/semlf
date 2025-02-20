@@ -1,0 +1,74 @@
+#+title: SemLF mode
+#+author: Roi Martin
+#+email: jroi.martin@gmail.com
+#+language: en
+#+options: ':t toc:t num:t author:t email:t
+
+* Overview
+
+semlf helps format documents using semantic linefeeds.
+
+-  Package name (NonGNU ELPA): ~semlf~
+-  Source code repository: <https://github.com/jroimartin/semlf>
+-  Bug tracker: <https://github.com/jroimartin/semlf/issues>
+
+The term "semantic linefeeds" or "semantic line breaks" refers to a
+set of conventions for using insensitive vertical whitespace to
+structure prose along semantic boundaries.
+
+The concept was first instroduced by Brian Kernighan in [[https://web.archive.org/web/20130108163017if_/http://miffy.tom-yam.or.jp:80/2238/ref/beg.pdf][UNIX for
+Beginners]] in October 1974.
+
+#+begin_quote
+Hints for Preparing Documents
+
+Most documents go through several versions (always more than you
+expected) before they are finally finished.  Accordingly, you should
+do whatever possible to make the job of changing them easy.
+
+First, when you do the purely mechanical operations of typing, type so
+subsequent editing will be easy.  Start each sentence on a new line.
+Make lines short, and break lines at natural places, such as after
+commas and semicolons, rather than randomly.  Since most people change
+documents by rewriting phrases and adding, deleting and rearranging
+sentences, these precautions simplify any editing you have to do
+later.
+#+end_quote
+
+The site [[https://sembr.org/][Semantic Line Breaks]] by Mattt and the blog post [[https://rhodesmill.org/brandon/2012/one-sentence-per-line/][Semantic
+Linefeeds]] by Brandon Rhodes are both excellent references.
+
+* Installation
+
+The package is available as ~semlf~ in NonGNU ELPA.  Since the NonGNU
+package archive is enabled by default, you can easily install it by
+executing =M-x package-install RET semlf=.  Alternatively, you can use
+=M-x list-packages=.
+
+* Usage
+
+This package provides just one function:
+
+- ~semlf-fill-paragraph~ :: Fill paragraph at or after point using
+  semantic linefeeds.
+
+  If JUSTIFY is non-nil (interactively, with prefix argument), justify
+  as well.
+
+~semlf-fill-paragraph~ can be called directly.  In this case, binding
+it to a key sequence might be convenient.
+
+#+begin_src emacs-lisp
+  (keymap-global-set "C-c q" #'semlf-fill-paragraph)
+#+end_src
+
+Also, it is suitable as a ~fill-paragraph-function~ value, so
+~fill-paragraph~ (bound to =M-q= by default) can leverage it.  In this
+case, it is recommended to add a hook for the specific major modes.
+For instance,
+
+#+begin_src emacs-lisp
+  (add-hook 'text-mode-hook
+	    (lambda ()
+	      (setq-local fill-paragraph-function #'semlf-fill-paragraph)))
+#+end_src
