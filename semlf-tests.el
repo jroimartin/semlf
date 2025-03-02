@@ -70,6 +70,15 @@
                       (lambda ()
 			(semlf-fill-paragraph))))
 
+(ert-deftest semlf-fill-twice-test ()
+  "Fill paragraph twice."
+  (ert-test-erts-file (ert-resource-file "semlf-fill-twice.erts")
+                      (lambda ()
+			(beginning-of-buffer)
+			(semlf-fill-paragraph)
+			(beginning-of-buffer)
+			(semlf-fill-paragraph))))
+
 (ert-deftest semlf-emacs-lisp-mode-test ()
   "Fill emacs-lisp-mode comment."
   (ert-test-erts-file (ert-resource-file "semlf-emacs-lisp-mode.erts")

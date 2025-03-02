@@ -50,9 +50,8 @@ justify as well."
 			""))
 	  (when (> (point) (line-beginning-position))
 	    (delete-horizontal-space)
-	    (when (not (= (point) (line-end-position)))
-	      (newline)
-	      (insert pfx)))))))
+	    (newline)
+	    (insert pfx))))))
   t)
 
 (provide 'semlf)
