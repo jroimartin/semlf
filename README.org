@@ -1,4 +1,4 @@
-#+title: SemLF mode
+#+title: SemLF
 #+author: Roi Martin
 #+email: jroi.martin@gmail.com
 #+language: en
@@ -9,7 +9,7 @@ in NonGNU ELPA.*
 
 * Overview
 
-semlf helps format documents using semantic linefeeds.
+SemLF helps format documents using semantic linefeeds.
 
 -  Package name (NonGNU ELPA): ~semlf~
 -  Source code repository: <https://github.com/jroimartin/semlf>

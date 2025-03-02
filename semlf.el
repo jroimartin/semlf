@@ -26,7 +26,7 @@
 
 ;;; Commentary:
 
-;; semlf helps format documents using semantic linefeeds.
+;; SemLF helps format documents using semantic linefeeds.
 
 ;;; Code:
 
