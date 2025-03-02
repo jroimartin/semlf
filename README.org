@@ -65,7 +65,7 @@ it to a key sequence might be convenient.
   (keymap-global-set "C-c q" #'semlf-fill-paragraph)
 #+end_src
 
-Also, it is suitable as a ~fill-paragraph-function~ value, so
+Also, it is suitable as ~fill-paragraph-function~ value, so
 ~fill-paragraph~ (bound to =M-q= by default) can leverage it.  In this
 case, it is recommended to add a hook for the specific major modes.
 For instance,
