@@ -5,7 +5,7 @@
 ;; Author: Roi Martin <jroi.martin@gmail.com>
 ;; Maintainer: Roi Martin <jroi.martin@gmail.com>
 ;; URL: https://github.com/jroimartin/semlf
-;; Version: 0.0
+;; Version: 0.1
 ;; Package-Requires: ((emacs "29.1"))
 ;; Keywords: convenience
 
