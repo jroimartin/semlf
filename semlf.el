@@ -33,6 +33,10 @@
 (defun semlf-fill-paragraph (&optional justify)
   "Fill paragraph at or after point using semantic linefeeds.
 
+This function ensures that a newline character follows every
+sentence, as punctuated by a period (.), exclamation mark (!), or
+question mark (?).
+
 If JUSTIFY is non-nil (interactively, with prefix argument),
 justify as well."
   (interactive "P")

@@ -19,8 +19,8 @@ The term "semantic linefeeds" or "semantic line breaks" refers to a
 set of conventions for using insensitive vertical whitespace to
 structure prose along semantic boundaries.
 
-The concept was first instroduced by Brian Kernighan in [[https://web.archive.org/web/20130108163017if_/http://miffy.tom-yam.or.jp:80/2238/ref/beg.pdf][UNIX for
-Beginners]] in October 1974.
+The concept was first instroduced by Brian Kernighan in
+[[https://web.archive.org/web/20130108163017if_/http://miffy.tom-yam.or.jp:80/2238/ref/beg.pdf][UNIX for Beginners]] in October 1974.
 
 #+begin_quote
 Hints for Preparing Documents
@@ -38,15 +38,84 @@ sentences, these precautions simplify any editing you have to do
 later.
 #+end_quote
 
-The site [[https://sembr.org/][Semantic Line Breaks]] by Mattt and the blog post [[https://rhodesmill.org/brandon/2012/one-sentence-per-line/][Semantic
-Linefeeds]] by Brandon Rhodes are both excellent references.
+Semantic linefeeds are usually used with markup languages that are not
+sensitive to newlines when exported to a different format (e.g. Org,
+Texinfo, Markdown).
+
+Let's say that we have the following paragraph in an Org document:
+
+#+begin_src org
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor.  Incididunt ut labore et dolore magna aliqua.  Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+commodo consequat.
+#+end_src
+
+After filling the paragraph using semantic linefeeds, the result is:
+
+#+begin_src org
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor.
+Incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ut aliquip ex ea commodo consequat.
+#+end_src
+
+However, when exported, in both cases the result is:
+
+#+begin_src text
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor.  Incididunt ut labore et dolore magna aliqua.  Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+commodo consequat.
+#+end_src
+
+So, what are the benefits?
+
+One of the greatest benefits is that semantic linefeeds are "diff
+friendly".
+
+For example,
+
+#+begin_src diff
+-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+-tempor.  Incididunt ut labore et dolore magna aliqua.  Ut enim ad minim
+-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+-commodo consequat.
++Lorem ipsum dolor sit amet, XXXXX consectetur adipiscing elit, sed do
++eiusmod tempor.  Incididunt ut labore et dolore magna aliqua.  Ut enim
++ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
++aliquip ex ea commodo consequat.
+#+end_src
+
+Versus,
+
+#+begin_src diff
+-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+-tempor.
++Lorem ipsum dolor sit amet, XXXXX consectetur adipiscing elit, sed do
++eiusmod tempor.
+ Incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+ ut aliquip ex ea commodo consequat.
+#+end_src
+
+Semantic linefeeds make easier to spot that a word ("XXXXX") was added
+in the first line.
+
+Also, they are convenient during code reviews.
+Shorter diffs and separating "ideas" with newlines allow to be more
+accurate when adding comments.
+
+The site [[https://sembr.org/][Semantic Line Breaks]] by Mattt and the blog post
+[[https://rhodesmill.org/brandon/2012/one-sentence-per-line/][Semantic Linefeeds]] by Brandon Rhodes are both excellent references.
 
 * Installation
 
-The package is available as ~semlf~ in NonGNU ELPA.  Since the NonGNU
-package archive is enabled by default, you can easily install it by
-executing =M-x package-install RET semlf=.  Alternatively, you can use
-=M-x list-packages=.
+The package is available as ~semlf~ in NonGNU ELPA.
+Since the NonGNU package archive is enabled by default, you can easily
+install it by executing =M-x package-install RET semlf=.
+Alternatively, you can use =M-x list-packages=.
 
 * Usage
 
@@ -55,19 +124,24 @@ This package provides just one function:
 - ~semlf-fill-paragraph~ :: Fill paragraph at or after point using
   semantic linefeeds.
 
+  This function ensures that a newline character follows every
+  sentence, as punctuated by a period (.), exclamation mark (!), or
+  question mark (?).
+
   If JUSTIFY is non-nil (interactively, with prefix argument), justify
   as well.
 
-~semlf-fill-paragraph~ can be called directly.  In this case, binding
-it to a key sequence might be convenient.
+~semlf-fill-paragraph~ can be called directly.
+In this case, binding it to a key sequence might be convenient.
 
 #+begin_src emacs-lisp
   (keymap-global-set "C-c q" #'semlf-fill-paragraph)
 #+end_src
 
 Also, it is suitable as ~fill-paragraph-function~ value, so
-~fill-paragraph~ (bound to =M-q= by default) can leverage it.  In this
-case, it is recommended to add a hook for the specific major modes.
+~fill-paragraph~ (bound to =M-q= by default) can leverage it.
+In this case, it is recommended to add a hook for the specific major
+modes.
 For instance,
 
 #+begin_src emacs-lisp
