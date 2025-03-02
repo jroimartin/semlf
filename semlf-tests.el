@@ -30,6 +30,26 @@
 			(setq-local fill-paragraph-function #'semlf-fill-paragraph)
 			(fill-paragraph))))
 
+(ert-deftest semlf-sentence-end-double-space-test ()
+  "Set `sentence-end-double-space'."
+  (ert-test-erts-file (ert-resource-file "semlf-sentence-end-double-space.erts")
+                      (lambda ()
+			(setq-local sentence-end-double-space t)
+			(semlf-fill-paragraph)
+			(forward-paragraph)
+			(setq-local sentence-end-double-space nil)
+			(semlf-fill-paragraph))))
+
+(ert-deftest semlf-fill-column-test ()
+  "Set `fill-column'."
+  (ert-test-erts-file (ert-resource-file "semlf-fill-column.erts")
+                      (lambda ()
+			(setq-local fill-column 70)
+			(semlf-fill-paragraph)
+			(forward-paragraph)
+			(setq-local fill-column 35)
+			(semlf-fill-paragraph))))
+
 (ert-deftest semlf-second-paragraph-test ()
   "Fill second paragraph."
   (ert-test-erts-file (ert-resource-file "semlf-second-paragraph.erts")
@@ -62,7 +82,6 @@
   (ert-test-erts-file (ert-resource-file "semlf-c-mode.erts")
                       (lambda ()
 			(c-mode)
-			(next-line)
 			(semlf-fill-paragraph))))
 
 (ert-deftest semlf-org-mode-test ()
