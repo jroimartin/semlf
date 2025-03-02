@@ -67,7 +67,7 @@
   "Fill last paragraph."
   (ert-test-erts-file (ert-resource-file "semlf-last-paragraph.erts")
                       (lambda ()
-			(end-of-buffer)
+			(goto-char (point-max))
 			(semlf-fill-paragraph))))
 
 (ert-deftest semlf-fill-prefix-test ()
@@ -80,9 +80,9 @@
   "Fill paragraph twice."
   (ert-test-erts-file (ert-resource-file "semlf-fill-twice.erts")
                       (lambda ()
-			(beginning-of-buffer)
+			(goto-char (point-min))
 			(semlf-fill-paragraph)
-			(beginning-of-buffer)
+			(goto-char (point-min))
 			(semlf-fill-paragraph))))
 
 (ert-deftest semlf-punctuation-marks-test ()
@@ -92,21 +92,21 @@
 			(semlf-fill-paragraph))))
 
 (ert-deftest semlf-emacs-lisp-mode-test ()
-  "Fill emacs-lisp-mode comment."
+  "Fill `emacs-lisp-mode' comment."
   (ert-test-erts-file (ert-resource-file "semlf-emacs-lisp-mode.erts")
                       (lambda ()
 			(emacs-lisp-mode)
 			(semlf-fill-paragraph))))
 
 (ert-deftest semlf-c-mode-test ()
-  "Fill c-mode comment."
+  "Fill `c-mode' comment."
   (ert-test-erts-file (ert-resource-file "semlf-c-mode.erts")
                       (lambda ()
 			(c-mode)
 			(semlf-fill-paragraph))))
 
 (ert-deftest semlf-org-mode-test ()
-  "Fill org-mode paragraph."
+  "Fill `org-mode' paragraph."
   (ert-test-erts-file (ert-resource-file "semlf-org-mode.erts")
                       (lambda ()
 			(org-mode)
