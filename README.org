@@ -4,6 +4,9 @@
 #+language: en
 #+options: ':t toc:t num:t author:t email:t
 
+*WIP: This package is work in progress and has not been published yet
+in NonGNU ELPA.*
+
 * Overview
 
 semlf helps format documents using semantic linefeeds.
