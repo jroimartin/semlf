@@ -50,6 +50,12 @@
 			(setq-local fill-column 35)
 			(semlf-fill-paragraph))))
 
+(ert-deftest semlf-align-test ()
+  "Fill and align paragraph."
+  (ert-test-erts-file (ert-resource-file "semlf-align.erts")
+                      (lambda ()
+			(semlf-fill-paragraph 'justify))))
+
 (ert-deftest semlf-second-paragraph-test ()
   "Fill second paragraph."
   (ert-test-erts-file (ert-resource-file "semlf-second-paragraph.erts")
