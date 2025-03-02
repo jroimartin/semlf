@@ -85,6 +85,12 @@
 			(beginning-of-buffer)
 			(semlf-fill-paragraph))))
 
+(ert-deftest semlf-punctuation-marks-test ()
+  "Insert newline after period, exclamation mark and question mark."
+  (ert-test-erts-file (ert-resource-file "semlf-punctuation-marks.erts")
+                      (lambda ()
+			(semlf-fill-paragraph))))
+
 (ert-deftest semlf-emacs-lisp-mode-test ()
   "Fill emacs-lisp-mode comment."
   (ert-test-erts-file (ert-resource-file "semlf-emacs-lisp-mode.erts")
