@@ -30,6 +30,7 @@
 
 ;;; Code:
 
+;;;###autoload
 (defun semlf-fill-paragraph (&optional justify)
   "Fill paragraph at or after point using semantic linefeeds.
 
