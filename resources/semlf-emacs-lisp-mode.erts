@@ -1,21 +1,131 @@
+Point-Char: |
+
 Name: emacs-lisp-mode
 
 =-=
 ;; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 ;; eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim
-;; ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-;; aliquip ex ea commodo consequat. Duis aute irure dolor in
-;; reprehenderit in voluptate.  Velit esse cillum dolore eu fugiat nulla
-;; pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-;; culpa qui officia deserunt mollit anim id est laborum.
+;; ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
 =-=
 ;; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 ;; eiusmod tempor.
 ;; Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-;; veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-;; ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-;; voluptate.
-;; Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-;; occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-;; mollit anim id est laborum.
+;; veniam, quis nostrud exercitation ullamco laboris nisi ut.
+=-=-=
+
+Name: emacs-lisp-mode - list - one single-line item
+Skip: t
+
+Known issue.  In `emacs-lisp-mode', single line items are filled by
+prefixing them with the list marker.
+
+=-=
+;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+=-=
+;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;;   eiusmod tempor.
+;;   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+;;   veniam, quis nostrud exercitation ullamco laboris nisi ut.
+=-=-=
+
+Name: emacs-lisp-mode - list - multiple single-line items
+Skip: t
+
+Known issue.  In `emacs-lisp-mode', single line items are filled by
+prefixing them with the list marker.
+
+=-=
+;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+;; - Aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+;; - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+=-=
+;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;;   eiusmod tempor.
+;;   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+;;   veniam, quis nostrud exercitation ullamco laboris nisi ut.
+;; - Aliquip ex ea commodo consequat.
+;;   Duis aute irure dolor in reprehenderit in voluptate velit esse
+;;   cillum dolore eu fugiat nulla pariatur.
+;; - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+;;   officia deserunt mollit anim id est laborum.
+=-=-=
+
+Name: emacs-lisp-mode - list - one multi-line item
+
+=-=
+;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;;   eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut
+;;   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+;;   ut.
+=-=
+;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;;   eiusmod tempor.
+;;   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+;;   veniam, quis nostrud exercitation ullamco laboris nisi ut.
+=-=-=
+
+Name: emacs-lisp-mode - list - multiple multi-line items
+Skip: t
+
+FIXME.  In `emacs-lisp-mode', when a multi-line item that begins with
+a short sentence is filled, the following line is prefixed with the
+list marker.
+
+=-=
+;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;;   eiusmod tempor.  Incididunt ut labore et dolore magn a aliqua. Ut
+;;   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+;;   ut.
+;; - Aliquip ex ea commodo consequat.  Duis aute irure dolor in
+;;   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+;;   pariatur.
+;; - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+;;   officia deserunt mollit anim id est laborum.
+=-=
+;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;;   eiusmod tempor.
+;;   Incididunt ut labore et dolore magn a aliqua. Ut enim ad minim
+;;   veniam, quis nostrud exercitation ullamco laboris nisi ut.
+;; - Aliquip ex ea commodo consequat.
+;;   Duis aute irure dolor in reprehenderit in voluptate velit esse
+;;   cillum dolore eu fugiat nulla pariatur.
+;; - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+;;   officia deserunt mollit anim id est laborum.
+=-=-=
+
+Name: emacs-lisp-mode - indented block
+
+Known issue.  In `emacs-lisp-mode', `fill-forward-paragraph' jumps to the
+beginning/end of the comment.
+
+=-=
+;; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;; eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut
+;; enim ad minim veniam, quis nostrud exercitation ullamco laboris
+;; nisi ut.
+
+;; 	|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+;; 	do eiusmod tempor.  Incididunt ut labore et dolore magna
+;; 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+;; 	ullamco laboris nisi ut.
+
+;; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;; eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut
+;; enim ad minim veniam, quis nostrud exercitation ullamco laboris
+;; nisi ut.
+=-=
+;; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;; eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut
+;; enim ad minim veniam, quis nostrud exercitation ullamco laboris
+;; nisi ut.
+
+;; 	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+;; 	do eiusmod tempor.
+;; 	Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+;; 	veniam, quis nostrud exercitation ullamco laboris nisi ut.
+
+;; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+;; eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut
+;; enim ad minim veniam, quis nostrud exercitation ullamco laboris
+;; nisi ut.
 =-=-=

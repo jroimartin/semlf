@@ -1,6 +1,6 @@
 Point-Char: |
 
-Name: org-mode
+Name: markdown-mode
 
 =-=
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -13,7 +13,7 @@ Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut.
 =-=-=
 
-Name: org-mode - list - one single-line item
+Name: markdown-mode - list - one single-line item
 
 =-=
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -24,10 +24,10 @@ Name: org-mode - list - one single-line item
   veniam, quis nostrud exercitation ullamco laboris nisi ut.
 =-=-=
 
-Name: org-mode - list - multiple single-line items
+Name: markdown-mode - list - multiple single-line items
 
-Known issue.  In `org-mode', `fill-forward-paragraph' jumps to the
-next/previous item of the list.
+Known issue.  In `markdown-mode', `fill-forward-paragraph' jumps to
+the next/previous item of the list.
 
 =-=
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -42,7 +42,7 @@ next/previous item of the list.
 - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 =-=-=
 
-Name: org-mode - list - one multi-line item
+Name: markdown-mode - list - one multi-line item
 
 =-=
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -56,10 +56,10 @@ Name: org-mode - list - one multi-line item
   veniam, quis nostrud exercitation ullamco laboris nisi ut.
 =-=-=
 
-Name: org-mode - list - multiple multi-line items
+Name: markdown-mode - list - multiple multi-line items
 
-Known issue.  In `org-mode', `fill-forward-paragraph' jumps to the
-next/previous item of the list.
+Known issue.  In `markdown-mode', `fill-forward-paragraph' jumps to
+the next/previous item of the list.
 
 =-=
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -83,7 +83,8 @@ next/previous item of the list.
   officia deserunt mollit anim id est laborum.
 =-=-=
 
-Name: org-mode - list - short sentence in multi-line item
+
+Name: markdown-mode - list - short sentence in multi-line item
 
 =-=
 - Lorem ipsum dolor.  Sit amet, consectetur adipiscing elit, sed do
@@ -97,7 +98,11 @@ Name: org-mode - list - short sentence in multi-line item
   veniam, quis nostrud exercitation ullamco laboris nisi ut.
 =-=-=
 
-Name: org-mode - indented block
+Name: markdown-mode - indented block
+Skip: t
+
+Known issue.  In `markdown-mode', `fill-forward-paragraph' ignores
+code blocks.
 
 =-=
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
