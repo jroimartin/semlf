@@ -43,8 +43,8 @@ justify as well."
   (interactive "P")
   (save-excursion
     (save-restriction
-      (let ((end (progn (forward-paragraph) (point)))
-	    (start (progn (backward-paragraph) (point)))
+      (let ((end (progn (fill-forward-paragraph 1) (point)))
+	    (start (progn (fill-forward-paragraph -1) (beginning-of-line) (point)))
 	    (pfx))
 	(narrow-to-region start end)
 	(while (< (point) (point-max))
