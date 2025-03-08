@@ -100,7 +100,7 @@ Versus,
  ut aliquip ex ea commodo consequat.
 #+end_src
 
-Semantic linefeeds make easier to spot that a word ("XXXXX") was added
+Semantic linefeeds make easier to spot that the word "XXXXX" was added
 in the first line.
 
 Also, they are convenient during code reviews.
