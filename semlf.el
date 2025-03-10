@@ -1,6 +1,6 @@
 ;;; semlf.el --- Format documents using semantic linefeeds -*- lexical-binding: t -*-
 
-;; Copyright (C) 2025 Roi Martin
+;; Copyright (C) 2025 Free Software Foundation, Inc.
 
 ;; Author: Roi Martin <jroi.martin@gmail.com>
 ;; Maintainer: Roi Martin <jroi.martin@gmail.com>

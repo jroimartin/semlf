@@ -1,6 +1,6 @@
 ;;; semlf-tests.el --- Test suite for semlf -*- lexical-binding: t -*-
 
-;; Copyright (C) 2025 Roi Martin
+;; Copyright (C) 2025 Free Software Foundation, Inc.
 
 ;; This file is NOT part of GNU Emacs.
 

@@ -5,13 +5,13 @@
 #+options: ':t toc:t num:t author:t email:t
 
 *WIP: This package is work in progress and has not been published yet
-in NonGNU ELPA.*
+in GNU ELPA.*
 
 * Overview
 
 SemLF helps format documents using semantic linefeeds.
 
--  Package name (NonGNU ELPA): ~semlf~
+-  Package name (GNU ELPA): ~semlf~
 -  Source code repository: <https://github.com/jroimartin/semlf>
 -  Bug tracker: <https://github.com/jroimartin/semlf/issues>
 
@@ -112,8 +112,8 @@ The site [[https://sembr.org/][Semantic Line Breaks]] by Mattt and the blog post
 
 * Installation
 
-The package is available as ~semlf~ in NonGNU ELPA.
-Since the NonGNU package archive is enabled by default, you can easily
+The package is available as ~semlf~ in GNU ELPA.
+Since the GNU package archive is enabled by default, you can easily
 install it by executing =M-x package-install RET semlf=.
 Alternatively, you can use =M-x list-packages=.
 
