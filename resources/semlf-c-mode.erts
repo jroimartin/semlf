@@ -16,8 +16,9 @@ Name: c-mode - single-line
 Name: c-mode - single-line - list - one single-line item
 Skip: t
 
-Known issue.  In `c-mode', single line items inside single-line
-comments are filled by prefixing them with the list marker.
+TODO - In `c-mode', single line items inside single-line comments are
+filled by prefixing them with the list marker.  This should be fixed
+in `c-mode'.
 
 =-=
 // - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -31,8 +32,9 @@ comments are filled by prefixing them with the list marker.
 Name: c-mode - single-line - list - multiple single-line items
 Skip: t
 
-Known issue.  In `c-mode', single line items inside single-line
-comments are filled by prefixing them with the list marker.
+TODO - In `c-mode', single line items inside single-line comments are
+filled by prefixing them with the list marker.  This should be fixed
+in `c-mode'.
 
 =-=
 // - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -67,9 +69,11 @@ Name: c-mode - single-line - list - one multi-line item
 Name: c-mode - single-line - list - multiple multi-line items
 Skip: t
 
-FIXME.  In `c-mode', when a multi-line item that begins with a short
+TODO - In `c-mode', when a multi-line item that begins with a short
 sentence and is inside a single-line comment is filled, the following
-line is prefixed with the list marker.
+line is prefixed with the list marker.  This is probably related to
+the test case "c-mode - single-line - list - one single-line item", so
+it should be fixed in `c-mode'.
 
 =-=
 // - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -147,8 +151,9 @@ Name: c-mode - multi-line
 Name: c-mode - multi-line - list - one single-line item
 Skip: t
 
-Known issue.  In `c-mode', when a single-line item inside a multi-line
+TODO - In `c-mode', when a single-line item inside a multi-line
 comment is filled, it is not prefixed with the comment prefix.
+This should be fixed in `c-mode'.
 
 =-=
 /*
@@ -166,8 +171,9 @@ comment is filled, it is not prefixed with the comment prefix.
 Name: c-mode - multi-line - list - multiple single-line items
 Skip: t
 
-Known issue.  In `c-mode', when a single-line item inside a multi-line
+TODO - In `c-mode', when a single-line item inside a multi-line
 comment is filled, it is not prefixed with the comment prefix.
+This should be fixed in `c-mode'.
 
 =-=
 /*
@@ -210,9 +216,11 @@ Name: c-mode - multi-line - list - one multi-line item
 Name: c-mode - multi-line - list - multiple multi-line items
 Skip: t
 
-Known issue.  In `c-mode', when a multi-line item that begins with a
-short sentence and is inside a multi-line comment is filled, the
-following lines are not prefixed correctly.
+TODO - In `c-mode', when a multi-line item that begins with a short
+sentence and is inside a multi-line comment is filled, the following
+lines are not prefixed correctly.  This is probably related to the
+test case "c-mode - multi-line - list - one single-line item", so it
+should be fixed in `c-mode'.
 
 =-=
 /*

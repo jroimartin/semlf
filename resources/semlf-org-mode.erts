@@ -26,7 +26,7 @@ Name: org-mode - list - one single-line item
 
 Name: org-mode - list - multiple single-line items
 
-Known issue.  In `org-mode', `fill-forward-paragraph' jumps to the
+In `org-mode', the `fill-forward-paragraph' function jumps to the
 next/previous item of the list.
 
 =-=
@@ -58,7 +58,7 @@ Name: org-mode - list - one multi-line item
 
 Name: org-mode - list - multiple multi-line items
 
-Known issue.  In `org-mode', `fill-forward-paragraph' jumps to the
+In `org-mode', the `fill-forward-paragraph' function jumps to the
 next/previous item of the list.
 
 =-=

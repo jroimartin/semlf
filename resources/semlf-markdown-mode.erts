@@ -26,8 +26,8 @@ Name: markdown-mode - list - one single-line item
 
 Name: markdown-mode - list - multiple single-line items
 
-Known issue.  In `markdown-mode', `fill-forward-paragraph' jumps to
-the next/previous item of the list.
+In `markdown-mode', the `fill-forward-paragraph' function jumps to the
+next/previous item of the list.
 
 =-=
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -58,8 +58,8 @@ Name: markdown-mode - list - one multi-line item
 
 Name: markdown-mode - list - multiple multi-line items
 
-Known issue.  In `markdown-mode', `fill-forward-paragraph' jumps to
-the next/previous item of the list.
+In `markdown-mode', the `fill-forward-paragraph' function jumps to the
+next/previous item of the list.
 
 =-=
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -83,7 +83,6 @@ the next/previous item of the list.
   officia deserunt mollit anim id est laborum.
 =-=-=
 
-
 Name: markdown-mode - list - short sentence in multi-line item
 
 =-=
@@ -101,8 +100,10 @@ Name: markdown-mode - list - short sentence in multi-line item
 Name: markdown-mode - indented block
 Skip: t
 
-Known issue.  In `markdown-mode', `fill-forward-paragraph' ignores
-code blocks.
+TODO - In `markdown-mode', the `fill-forward-paragraph' function
+ignores code blocks.  We should reach out to the `markdown-mode'
+maintainer to understand the reason for this and possibly suggest a
+change to this behavior.
 
 =-=
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

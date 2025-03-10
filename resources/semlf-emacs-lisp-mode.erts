@@ -16,8 +16,8 @@ Name: emacs-lisp-mode
 Name: emacs-lisp-mode - list - one single-line item
 Skip: t
 
-Known issue.  In `emacs-lisp-mode', single line items are filled by
-prefixing them with the list marker.
+TODO - In `emacs-lisp-mode', single line items are filled by prefixing
+them with the list marker.  This should be fixed in `emacs-lisp-mode'.
 
 =-=
 ;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -31,8 +31,8 @@ prefixing them with the list marker.
 Name: emacs-lisp-mode - list - multiple single-line items
 Skip: t
 
-Known issue.  In `emacs-lisp-mode', single line items are filled by
-prefixing them with the list marker.
+TODO - In `emacs-lisp-mode', single line items are filled by prefixing
+them with the list marker.  This should be fixed in `emacs-lisp-mode'.
 
 =-=
 ;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -67,9 +67,11 @@ Name: emacs-lisp-mode - list - one multi-line item
 Name: emacs-lisp-mode - list - multiple multi-line items
 Skip: t
 
-FIXME.  In `emacs-lisp-mode', when a multi-line item that begins with
-a short sentence is filled, the following line is prefixed with the
-list marker.
+TODO - In `emacs-lisp-mode', when a multi-line item that begins with a
+short sentence is filled, the following line is prefixed with the list
+marker.  This is probably related to the test case "emacs-lisp-mode -
+list - one single-line item", so it should be fixed in
+`emacs-lisp-mode'.
 
 =-=
 ;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -95,8 +97,8 @@ list marker.
 
 Name: emacs-lisp-mode - indented block
 
-Known issue.  In `emacs-lisp-mode', `fill-forward-paragraph' jumps to the
-beginning/end of the comment.
+In `emacs-lisp-mode', the `fill-forward-paragraph' function jumps to
+the beginning/end of the comment.
 
 =-=
 ;; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
