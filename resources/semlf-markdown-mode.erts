@@ -103,7 +103,8 @@ Skip: t
 TODO - In `markdown-mode', the `fill-forward-paragraph' function
 ignores code blocks.  We should reach out to the `markdown-mode'
 maintainer to understand the reason for this and possibly suggest a
-change to this behavior.
+change to this behavior.  This works as expected in
+`markdown-ts-mode'.
 
 =-=
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
