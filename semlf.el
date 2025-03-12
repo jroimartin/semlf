@@ -47,7 +47,7 @@ justify as well."
 	    (start (progn (fill-forward-paragraph -1) (beginning-of-line) (point)))
 	    pfx)
 	(narrow-to-region start end)
-	(while (< (point) (point-max))
+	(while (not (eobp))
 	  (setq pfx (or (fill-region-as-paragraph
 			 (progn (forward-word) (beginning-of-line) (point))
 			 (progn (forward-sentence) (point))
