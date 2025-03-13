@@ -19,7 +19,7 @@ The term "semantic linefeeds" or "semantic line breaks" refers to a
 set of conventions for using insensitive vertical whitespace to
 structure prose along semantic boundaries.
 
-The concept was first instroduced by Brian Kernighan in
+The concept was first introduced by Brian Kernighan in
 [[https://web.archive.org/web/20130108163017if_/http://miffy.tom-yam.or.jp:80/2238/ref/beg.pdf][UNIX for Beginners]] in October 1974.
 
 #+begin_quote
