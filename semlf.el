@@ -42,11 +42,10 @@ If JUSTIFY is non-nil (interactively, with prefix argument),
 justify as well."
   (interactive "P")
   (save-excursion
-    (save-restriction
-      (let ((end (progn (fill-forward-paragraph 1) (point)))
-	    (start (progn (fill-forward-paragraph -1) (beginning-of-line) (point)))
-	    pfx)
-	(narrow-to-region start end)
+    (let ((end (progn (fill-forward-paragraph 1) (point)))
+	  (start (progn (fill-forward-paragraph -1) (beginning-of-line) (point)))
+	  pfx)
+      (with-restriction start end
 	(while (not (eobp))
 	  (setq pfx (or (fill-region-as-paragraph
 			 (progn (forward-word) (beginning-of-line) (point))
