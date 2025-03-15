@@ -42,17 +42,28 @@ If JUSTIFY is non-nil (interactively, with prefix argument),
 justify as well."
   (interactive "P")
   (save-excursion
-    (let ((end (progn (fill-forward-paragraph 1) (point)))
-	  (start (progn (fill-forward-paragraph -1) (beginning-of-line) (point)))
+    (let ((end (progn
+		 (fill-forward-paragraph 1)
+		 (backward-word)
+		 (end-of-line)
+		 (point)))
+	  (start (progn
+		   (fill-forward-paragraph -1)
+		   (forward-word)
+		   (beginning-of-line)
+		   (point)))
 	  pfx)
       (with-restriction start end
+	(let ((fill-column (point-max)))
+	  (setq pfx (or (fill-region-as-paragraph (point-min) (point-max)) "")))
+	(goto-char (point-min))
 	(while (not (eobp))
-	  (setq pfx (or (fill-region-as-paragraph
-			 (progn (forward-word) (beginning-of-line) (point))
-			 (progn (forward-sentence) (point))
-			 justify)
-			""))
-	  (when (> (point) (line-beginning-position))
+	  (let ((fill-prefix pfx))
+	    (fill-region-as-paragraph (progn (forward-word) (beginning-of-line) (point))
+				      (progn (forward-sentence) (point))
+				      justify))
+	  (when (and (> (point) (line-beginning-position))
+		     (< (point) (line-end-position)))
 	    (delete-horizontal-space)
 	    (newline)
 	    (insert pfx))))))

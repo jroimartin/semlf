@@ -71,9 +71,9 @@
 			(goto-char (point-min))
 			(semlf-fill-paragraph))))
 
-(ert-deftest semlf-test-list ()
-  "Fill list."
-  (ert-test-erts-file (ert-resource-file "semlf-list.erts")
+(ert-deftest semlf-test-fill-prefix ()
+  "Insert fill prefix."
+  (ert-test-erts-file (ert-resource-file "semlf-fill-prefix.erts")
                       (lambda ()
 			(semlf-fill-paragraph))))
 

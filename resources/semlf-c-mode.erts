@@ -13,28 +13,7 @@ Name: c-mode - single-line
 // veniam, quis nostrud exercitation ullamco laboris nisi ut.
 =-=-=
 
-Name: c-mode - single-line - list - one single-line item
-Skip: t
-
-TODO - In `c-mode', single line items inside single-line comments are
-filled by prefixing them with the list marker.  This should be fixed
-in `c-mode'.
-
-=-=
-// - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-=-=
-// - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//   eiusmod tempor.
-//   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-//   veniam, quis nostrud exercitation ullamco laboris nisi ut.
-=-=-=
-
-Name: c-mode - single-line - list - multiple single-line items
-Skip: t
-
-TODO - In `c-mode', single line items inside single-line comments are
-filled by prefixing them with the list marker.  This should be fixed
-in `c-mode'.
+Name: c-mode - single-line - fill-prefix - marker
 
 =-=
 // - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -42,58 +21,31 @@ in `c-mode'.
 // - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 =-=
 // - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+// - eiusmod tempor.
+// - Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+// - veniam, quis nostrud exercitation ullamco laboris nisi ut.
+// - Aliquip ex ea commodo consequat.
+// - Duis aute irure dolor in reprehenderit in voluptate velit esse
+// - cillum dolore eu fugiat nulla pariatur.
+// - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+// - officia deserunt mollit anim id est laborum.
+=-=-=
+
+Name: c-mode - single-line - fill-prefix - whitespace
+
+=-=
+// - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+//   Aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+//   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+=-=
+// - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 //   eiusmod tempor.
 //   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
 //   veniam, quis nostrud exercitation ullamco laboris nisi ut.
-// - Aliquip ex ea commodo consequat.
+//   Aliquip ex ea commodo consequat.
 //   Duis aute irure dolor in reprehenderit in voluptate velit esse
 //   cillum dolore eu fugiat nulla pariatur.
-// - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-//   officia deserunt mollit anim id est laborum.
-=-=-=
-
-Name: c-mode - single-line - list - one multi-line item
-
-=-=
-// - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//   eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut
-//   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-//   ut.
-=-=
-// - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//   eiusmod tempor.
-//   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-//   veniam, quis nostrud exercitation ullamco laboris nisi ut.
-=-=-=
-
-Name: c-mode - single-line - list - multiple multi-line items
-Skip: t
-
-TODO - In `c-mode', when a multi-line item that begins with a short
-sentence and is inside a single-line comment is filled, the following
-line is prefixed with the list marker.  This is probably related to
-the test case "c-mode - single-line - list - one single-line item", so
-it should be fixed in `c-mode'.
-
-=-=
-// - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//   eiusmod tempor.  Incididunt ut labore et dolore magn a aliqua. Ut
-//   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-//   ut.
-// - Aliquip ex ea commodo consequat.  Duis aute irure dolor in
-//   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-//   pariatur.
-// - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-//   officia deserunt mollit anim id est laborum.
-=-=
-// - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//   eiusmod tempor.
-//   Incididunt ut labore et dolore magn a aliqua. Ut enim ad minim
-//   veniam, quis nostrud exercitation ullamco laboris nisi ut.
-// - Aliquip ex ea commodo consequat.
-//   Duis aute irure dolor in reprehenderit in voluptate velit esse
-//   cillum dolore eu fugiat nulla pariatur.
-// - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+//   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 //   officia deserunt mollit anim id est laborum.
 =-=-=
 
@@ -148,32 +100,7 @@ Name: c-mode - multi-line
  */
 =-=-=
 
-Name: c-mode - multi-line - list - one single-line item
-Skip: t
-
-TODO - In `c-mode', when a single-line item inside a multi-line
-comment is filled, it is not prefixed with the comment prefix.
-This should be fixed in `c-mode'.
-
-=-=
-/*
- * - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
- */
-=-=
-/*
- * - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
- *   eiusmod tempor.
- *   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
- *   veniam, quis nostrud exercitation ullamco laboris nisi ut.
- */
-=-=-=
-
-Name: c-mode - multi-line - list - multiple single-line items
-Skip: t
-
-TODO - In `c-mode', when a single-line item inside a multi-line
-comment is filled, it is not prefixed with the comment prefix.
-This should be fixed in `c-mode'.
+Name: c-mode - multi-line - fill-prefix - marker
 
 =-=
 /*
@@ -184,25 +111,24 @@ This should be fixed in `c-mode'.
 =-=
 /*
  * - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
- *   eiusmod tempor.
- *   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
- *   veniam, quis nostrud exercitation ullamco laboris nisi ut.
+ * - eiusmod tempor.
+ * - Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+ * - veniam, quis nostrud exercitation ullamco laboris nisi ut.
  * - Aliquip ex ea commodo consequat.
- *   Duis aute irure dolor in reprehenderit in voluptate velit esse
- *   cillum dolore eu fugiat nulla pariatur.
+ * - Duis aute irure dolor in reprehenderit in voluptate velit esse
+ * - cillum dolore eu fugiat nulla pariatur.
  * - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
- *   officia deserunt mollit anim id est laborum.
+ * - officia deserunt mollit anim id est laborum.
  */
 =-=-=
 
-Name: c-mode - multi-line - list - one multi-line item
+Name: c-mode - multi-line - fill-prefix - whitespace
 
 =-=
 /*
- * - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
- *   eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut
- *   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- *   ut.
+ * - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+ *   Aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+ *   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
  */
 =-=
 /*
@@ -210,40 +136,10 @@ Name: c-mode - multi-line - list - one multi-line item
  *   eiusmod tempor.
  *   Incididunt ut labore et dolore magna aliqua. Ut enim ad minim
  *   veniam, quis nostrud exercitation ullamco laboris nisi ut.
- */
-=-=-=
-
-Name: c-mode - multi-line - list - multiple multi-line items
-Skip: t
-
-TODO - In `c-mode', when a multi-line item that begins with a short
-sentence and is inside a multi-line comment is filled, the following
-lines are not prefixed correctly.  This is probably related to the
-test case "c-mode - multi-line - list - one single-line item", so it
-should be fixed in `c-mode'.
-
-=-=
-/*
- * - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
- *   eiusmod tempor.  Incididunt ut labore et dolore magn a aliqua. Ut
- *   enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
- *   ut.
- * - Aliquip ex ea commodo consequat.  Duis aute irure dolor in
- *   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
- *   pariatur.
- * - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
- *   officia deserunt mollit anim id est laborum.
- */
-=-=
-/*
- * - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
- *   eiusmod tempor.
- *   Incididunt ut labore et dolore magn a aliqua. Ut enim ad minim
- *   veniam, quis nostrud exercitation ullamco laboris nisi ut.
- * - Aliquip ex ea commodo consequat.
+ *   Aliquip ex ea commodo consequat.
  *   Duis aute irure dolor in reprehenderit in voluptate velit esse
  *   cillum dolore eu fugiat nulla pariatur.
- * - Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+ *   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
  *   officia deserunt mollit anim id est laborum.
  */
 =-=-=
