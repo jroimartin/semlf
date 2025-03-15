@@ -59,7 +59,7 @@ justify as well."
 	(goto-char (point-min))
 	(while (not (eobp))
 	  (let ((fill-prefix pfx))
-	    (fill-region-as-paragraph (progn (forward-word) (beginning-of-line) (point))
+	    (fill-region-as-paragraph (point)
 				      (progn (forward-sentence) (point))
 				      justify))
 	  (when (and (> (point) (line-beginning-position))
