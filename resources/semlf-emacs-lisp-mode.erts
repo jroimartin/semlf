@@ -13,7 +13,7 @@ Name: emacs-lisp-mode
 ;; veniam, quis nostrud exercitation ullamco laboris nisi ut.
 =-=-=
 
-Name: emacs-lisp-mode - marker
+Name: emacs-lisp-mode - fill-prefix - marker
 
 =-=
 ;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -31,7 +31,7 @@ Name: emacs-lisp-mode - marker
 ;; - officia deserunt mollit anim id est laborum.
 =-=-=
 
-Name: emacs-lisp-mode - whitespace
+Name: emacs-lisp-mode - fill-prefix - whitespace
 
 =-=
 ;; - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.  Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
