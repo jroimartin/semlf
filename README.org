@@ -4,8 +4,8 @@
 #+language: en
 #+options: ':t toc:t num:t author:t email:t
 
-*WIP: This package is work in progress and has not been published yet
-in GNU ELPA.*
+*This repository has been archived.  The package is now part of GNU
+Emacs.*
 
 * Overview
 
